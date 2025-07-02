@@ -1,0 +1,17 @@
+version: 2
+updates:
+  # Para dependencias de JavaScript (npm)
+  - package-ecosystem: "npm"
+    directory: "/"  # raíz del proyecto
+    schedule:
+      interval: "weekly"  # puedes cambiar a daily o monthly
+    commit-message:
+      prefix: "npm"
+
+  # Para dependencias PHP (Laravel usa Composer)
+  - package-ecosystem: "composer"
+    directory: "/"  # raíz del proyecto
+    schedule:
+      interval: "weekly"
+    commit-message:
+      prefix: "composer"
